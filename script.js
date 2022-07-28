@@ -4,12 +4,11 @@ let size_step=100/num        /*заменить на значение перем
 var root= document.querySelector(":root");
 let step
 let shift_right = 0
-
+let k=0
 
 let button= document.querySelector("button");
 button.addEventListener("click",  create_step )
-function create_step(){   
-let k=0
+function create_step(){  
     if(k < num){ 
         k++
         step = document.createElement("div")
