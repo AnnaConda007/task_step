@@ -13,6 +13,7 @@ let k_arr=0
 let ol 
 let primary_form
 let  button_ready
+ 
 /*
 let button= document.querySelector("button");
 button.addEventListener("click",  create_step )
@@ -31,7 +32,7 @@ function create_step(){
       }}
 */
 
-let start_button =  document.getElementById("input_button")   
+let start_button =  document.getElementById("start_button")   
 start_button.addEventListener("click", start_form)
 
 function start_form(){
@@ -47,46 +48,46 @@ function start_form(){
     primary_form.append(button__send_value_in_arr)
     button__send_value_in_arr.id = "send"
     button__send_value_in_arr.setAttribute('type', 'submit');
-    button__send_value_in_arr.setAttribute("value", "следующий шаг" )
+    button__send_value_in_arr.setAttribute("value", "следующая задача" )
     primary_form.addEventListener("submit", function(evt) {  
     let value_of_primary_input=document.getElementById("primary_input").value
     arr.push(value_of_primary_input)
     evt.preventDefault()
-    arr_append_value_primary_form()
+    arr_send_in_display()
     k_arr++
     })
-    create_list_of_arr_area()
+    create_arr_area()
 }
-function arr_append_value_primary_form(){
-    let li=document.createElement("input")
-    li.setAttribute('type', 'checkbox');
-    li.id="li";
-    let label=document.createElement("label")
-    ol.append(label)
-    label.innerHTML="value"
-    label.setAttribute("for","li")
+
+function arr_send_in_display(){
+    let li =document.createElement("li")
     ol.append(li)
-    li.innerHTML=arr[k_arr]
+    ol.append(button_ready)
+    let li_input=document.createElement("input")
+    li.append(li_input)
+    li_input.setAttribute('type', 'checkbox');
+    li_input.id="li_input";
+    let label=document.createElement("label")
+    li.append(label)
+    label.setAttribute("for","li_input")
+    label.innerHTML=arr[k_arr]
  }
 
-function create_list_of_arr_area(){
+function create_arr_area(){
      arr_area =document.createElement("div")
      body.append(arr_area)
-       ol = document.createElement("form")
-     arr_area.append(ol)
      arr_area.id="arr_area"
+     ol = document.createElement("ol")
+    arr_area.append(ol)
      button_ready=document.createElement("button") 
-     button_ready.innerHTML="готово"
+     button_ready.innerHTML="все задачи введены"
         button_ready.id="step_button"
-        arr_area.append(button_ready)
-    
         button_ready.addEventListener("click", function(){
         let step_area=document.createElement("div")
     body.append(step_area)
     step_area.id ="task_body" 
     primary_form.remove()
     })
-   
 }
 
 

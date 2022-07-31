@@ -19,6 +19,22 @@ align-items: center
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
 }
+#start_button{
+    color: white;
+    background-color:transparent ;
+    box-shadow: 0 0 0 2px white;
+    width: 40%;
+    text-align: center;
+    border-color: transparent;
+    padding: 10px;
+}
+
+#start_button:hover{
+box-shadow: 0  0 10px white;
+}
+#start_button:active{
+transform:translateX(5px);
+}
 
 #arr_area{
     width: 30%;
@@ -26,18 +42,12 @@ align-items: center
     color: white;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
-    
+  
 }
     
 
 
-#input_button{
-position: absolute; 
-}
 
-#form{
-
-}
 
 #primary_input{
     color: white;
@@ -66,15 +76,18 @@ position: absolute;
  transform:translateX(5px);
 }
 
-
-
+ol{
+    height: 100%;
+     
+    
+}
 li{
     list-style-position:inside;
     list-style-type: decimal;
     margin: 10px;
     padding: 10px;
     box-shadow: 0 0 0 2px white;
-    
+    height: 10%;
     
 }
 
@@ -82,11 +95,16 @@ li{
     color: white;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
-    width: 100%;
+    width: 80%;
     text-align: center;
     border-color: transparent;
-    padding: 10px;
-    bottom: 1px;
+    margin: 10px;
+    padding: 5px;
+    margin: 10px;
+    bottom:  ;
+    
+  
+  
 }
 #step_button:active{
     transform:translateX(5px);
