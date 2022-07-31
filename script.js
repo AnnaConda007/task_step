@@ -87,6 +87,7 @@ function create_arr_area(){
     body.append(step_area)
     step_area.id ="task_body" 
     primary_form.remove()
+    button_ready.remove()
     })
 }
 
