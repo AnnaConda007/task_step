@@ -17,9 +17,10 @@ let li_input=0
 
 
 let start_button =  document.getElementById("start_button")   
-start_button.addEventListener("click", start_)
+start_button.addEventListener("click", function(){
 
-function start_(){
+
+
     start_button.remove()
       primary_form = document.createElement("form")    
       primary_form.id="form"
@@ -38,63 +39,82 @@ function start_(){
     arr.push(value_of_primary_input)
     evt.preventDefault()
     arr_send_in_display()
+    function arr_send_in_display(){
+        let li =document.createElement("li")
+        ol.append(li)
+        ol.append(button_ready)
+        li_input=document.createElement("input")
+        li.append(li_input)
+        li_input.setAttribute('type', 'checkbox');
+        li_input.id="li_input";
+        let label=document.createElement("label")
+        li.append(label)
+        label.setAttribute("for","li_input")
+        label.innerHTML=arr[k_arr]
+        
+    }
+    blue() 
     k_arr++
     })
-    create_arr_area()
-    
-    blue()
-    
-   
-}
+    create_arr_area()  
+    function create_arr_area(){
+        arr_area =document.createElement("div")
+        body.append(arr_area)
+        arr_area.id="arr_area"
+        ol = document.createElement("ol")
+       arr_area.append(ol)
+        button_ready=document.createElement("button") 
+        button_ready.innerHTML="все задачи введены"
+           button_ready.id="step_button"
+           button_ready.addEventListener("click", function(){
+           let step_area=document.createElement("div")
+       body.append(step_area)
+       step_area.id ="task_body" 
+       primary_form.remove()
+       button_ready.remove()
+       
 
-
-
-function arr_send_in_display(){
-    let li =document.createElement("li")
-    ol.append(li)
-    ol.append(button_ready)
-    li_input=document.createElement("input")
-    li.append(li_input)
-    li_input.setAttribute('type', 'checkbox');
-    li_input.id="li_input";
-    let label=document.createElement("label")
-    li.append(label)
-    label.setAttribute("for","li_input")
-    label.innerHTML=arr[k_arr]
-    
- }
-
-function create_arr_area(){
-     arr_area =document.createElement("div")
-     body.append(arr_area)
-     arr_area.id="arr_area"
-     ol = document.createElement("ol")
-    arr_area.append(ol)
-     button_ready=document.createElement("button") 
-     button_ready.innerHTML="все задачи введены"
-        button_ready.id="step_button"
-        button_ready.addEventListener("click", function(){
-        let step_area=document.createElement("div")
-    body.append(step_area)
-    step_area.id ="task_body" 
-    primary_form.remove()
-    button_ready.remove()
-     })
+        })
+       }
     }
+
+
+
+
+    
+)
+
+
+
+
+    
+
+
 
 
 
 
 
     function blue(){ ol.addEventListener("click", function(){
-        if(k_of_step < num){ 
+        if(k_of_step < num   ){ 
             k_of_step++
-            alert(k_of_step)
+    
             ol.style.backgroundColor="blue"
-          }
-       })}
+            ol.addEventListener("click", function(){
+                alert("vhn")
+            })
+          }}
+          )}
+
+          
+         
 
 
+
+
+
+
+ 
 
     /*ol.addEventListener("click", function(){
         if(k_of_step < num){ 
