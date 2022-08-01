@@ -2,7 +2,7 @@
 let  arr=[]
 let task_body = document.querySelector(".task_body")
 let body = document.querySelector("body")
-let num = 5/*+prompt()*/
+let num = 5
 let size_step=100/num        /*заменить на значение переменной*/
 var root= document.querySelector(":root");
 let step
@@ -13,7 +13,7 @@ let k_arr=0
 let ol 
 let primary_form
 let  button_ready
- 
+let li_input
 /*
 let button= document.querySelector("button");
 button.addEventListener("click",  create_step )
@@ -33,9 +33,9 @@ function create_step(){
 */
 
 let start_button =  document.getElementById("start_button")   
-start_button.addEventListener("click", start_form)
+start_button.addEventListener("click", start_)
 
-function start_form(){
+function start_(){
     start_button.remove()
       primary_form = document.createElement("form")    
       primary_form.id="form"
@@ -63,7 +63,7 @@ function arr_send_in_display(){
     let li =document.createElement("li")
     ol.append(li)
     ol.append(button_ready)
-    let li_input=document.createElement("input")
+    li_input=document.createElement("input")
     li.append(li_input)
     li_input.setAttribute('type', 'checkbox');
     li_input.id="li_input";
@@ -71,6 +71,7 @@ function arr_send_in_display(){
     li.append(label)
     label.setAttribute("for","li_input")
     label.innerHTML=arr[k_arr]
+    
  }
 
 function create_arr_area(){
@@ -88,8 +89,14 @@ function create_arr_area(){
     step_area.id ="task_body" 
     primary_form.remove()
     button_ready.remove()
+    li_input.addEventListener("click", function(){
+        alert("fcvb")
+     
+     
+     })
+    
+    
     })
+   
 }
-
-
 
