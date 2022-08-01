@@ -13,24 +13,8 @@ let k_arr=0
 let ol 
 let primary_form
 let  button_ready
-let li_input
-/*
-let button= document.querySelector("button");
-button.addEventListener("click",  create_step )
-function create_step(){  
-    if(k_of_step < num){ 
-        k_of_step++
-        step = document.createElement("div")
-        task_body.append(step)
-         step.style.width= size_step + "%"
-         step.style.height=size_step + "%"
-         step.style.backgroundColor="blue"
-         step.style.position= "absolute                   
-         step.style.left=  shift_right + "%"
-         step.style.bottom= shift_right + "%"
-         shift_right= shift_right + size_step
-      }}
-*/
+let li_input=0
+
 
 let start_button =  document.getElementById("start_button")   
 start_button.addEventListener("click", start_)
@@ -57,7 +41,13 @@ function start_(){
     k_arr++
     })
     create_arr_area()
+    
+    blue()
+    
+   
 }
+
+
 
 function arr_send_in_display(){
     let li =document.createElement("li")
@@ -89,14 +79,35 @@ function create_arr_area(){
     step_area.id ="task_body" 
     primary_form.remove()
     button_ready.remove()
-    li_input.addEventListener("click", function(){
-        alert("fcvb")
-     
-     
      })
-    
-    
-    })
-   
-}
+    }
 
+
+
+
+
+    function blue(){ ol.addEventListener("click", function(){
+        if(k_of_step < num){ 
+            k_of_step++
+            alert(k_of_step)
+            ol.style.backgroundColor="blue"
+          }
+       })}
+
+
+
+    /*ol.addEventListener("click", function(){
+        if(k_of_step < num){ 
+            k_of_step++
+           let step = document.createElement("div")
+           step_area.append(step)
+         step.style.width= size_step + "%"
+         step.style.height=size_step + "%"
+         step.style.backgroundColor="blue"
+         step.style.position= "absolute"                  
+         step.style.left=  shift_right + "%"
+         step.style.bottom= shift_right + "%"
+         shift_right= shift_right + size_step
+          }
+
+       })*/
