@@ -95,7 +95,7 @@ li{
     text-align: center;
     border-color: transparent;
     padding: 5px;
-    margin: 15px auto 15px ;
+    margin: -20% auto 20% ;
     display: block;
 }
 
@@ -103,5 +103,5 @@ li{
     transform:translateX(5px);
 }
    #step_button:hover{
-    box-shadow: 0  0 10px white;
+    box-shadow: 0  0 10px rgba(255, 255, 255, 0.811);
      }
