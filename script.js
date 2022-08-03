@@ -82,8 +82,25 @@ let li_double
   label.setAttribute("for","li_input")
     label.innerHTML=arr[i]
     li_input.addEventListener("click",function(){
-        alert("daaa")
-    })}
+    let size_step = 100/k_arr
+    let step = document.createElement("div")
+    step_area.append(step)
+  step.style.width= size_step + "%"
+  step.style.height=size_step + "%"
+  step.style.backgroundColor="blue"
+  step.style.position= "absolute"                  
+  step.style.left=  shift_right + "%"
+  step.style.bottom= shift_right + "%"
+  shift_right= shift_right + size_step
+
+    })
+
+
+
+
+
+
+}
 } }
 
 )
