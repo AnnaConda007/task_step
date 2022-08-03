@@ -16,8 +16,8 @@ let shift_right = 0
 let k_of_step=0  /*k_arr*/
 let step_area
 let k_arr=0
-let li_input=0
-
+let li_input
+let ol_double
  
 
 
@@ -50,14 +50,8 @@ let li_input=0
          arr_area.append(ol)}
     li =document.createElement("li")
     ol.append(li)
-    li_input=document.createElement("input")
-    li.append(li_input)
-    li_input.setAttribute('type', 'checkbox');
-    li_input.id="li_input";
-    let label=document.createElement("label")
-    li.append(label)
-    label.setAttribute("for","li_input")
-    label.innerHTML=arr[k_arr]
+     
+    li.innerHTML=arr[k_arr]
     if(button_ready==undefined){
         button_ready=document.createElement("button") 
         button_ready.innerHTML="все задачи введены"
@@ -65,21 +59,36 @@ let li_input=0
         arr_area.append(button_ready)
     }
     k_arr++
-    button_ready.addEventListener("click", function(){     /*  Заменить на нормальное решение*/
+    button_ready.addEventListener("click", function(){     /*  Заменить на нормальное решение без такого колличества вложенности*/
     if(step_area==undefined){step_area=document.createElement("div")
     body.append(step_area)
     step_area.id ="task_body" 
     primary_form.remove()
     button_ready.remove()
-}})
+    ol.remove()
+    li.remove()
+    if(ol_double==undefined){ol_double= document.createElement("ol")
+arr_area.append(ol_double)}
+let li_double
+  for(let i=0; i<k_arr; i++){
+    li_double =document.createElement("li")
+  ol_double.append(li_double)
+  li_input=document.createElement("input")
+  li_double.append(li_input)
+  li_input.setAttribute('type', 'checkbox');
+  li_input.id="li_input";
+  let label=document.createElement("label")
+  li_double.append(label)
+  label.setAttribute("for","li_input")
+    label.innerHTML=arr[i]
+    li_input.addEventListener("click",function(){
+        alert("daaa")
+    })}
+} }
+
+)
 
 
-li.addEventListener("click", function(){
-    alert(arr)
 })
 
-  })
-
-
-
-
+ 
