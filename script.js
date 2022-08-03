@@ -87,8 +87,7 @@ let li_double
     step_area.append(step)
   step.style.width= size_step + "%"
   step.style.height=size_step + "%"
-  step.style.backgroundColor="blue"
-  step.style.position= "absolute"                  
+  step.style.backgroundColor="blue"                
   step.style.left=  shift_right + "%"
   step.style.bottom= shift_right + "%"
   shift_right= shift_right + size_step

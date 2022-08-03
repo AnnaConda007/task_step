@@ -3,6 +3,7 @@ html, body {height: 100% }
 *{
     padding: 0px;
     margin: 0px;
+     
 }
 
 body{
@@ -15,9 +16,9 @@ align-items: center
 #task_body{
  width: 60%;
  height: 90%;
- color: white;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
+    
 }
 
 #start_button{
