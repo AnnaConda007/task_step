@@ -18,7 +18,6 @@ let step_area
 let k_arr=0
 let li_input
 let ol_double
- 
 
 
 
@@ -85,12 +84,14 @@ let li_double
     let size_step = 100/k_arr
     let step = document.createElement("div")
     step_area.append(step)
+    
   step.style.width= size_step + "%"
   step.style.height=size_step + "%"
   step.style.backgroundColor="blue"                
   step.style.left=  shift_right + "%"
   step.style.bottom= shift_right + "%"
   shift_right= shift_right + size_step
+  step.style.position="absolute"
 
     })
 

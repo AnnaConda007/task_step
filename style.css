@@ -1,9 +1,10 @@
 
+
+
 html, body {height: 100% }
 *{
     padding: 0px;
     margin: 0px;
-     
 }
 
 body{
@@ -18,7 +19,7 @@ align-items: center
  height: 90%;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
-    
+    position:"absolute"
 }
 
 #start_button{
@@ -44,6 +45,7 @@ transform:translateX(5px);
     color: white;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
+    position:"absolute"
 }
     
 #primary_input{
