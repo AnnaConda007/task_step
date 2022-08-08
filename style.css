@@ -89,7 +89,7 @@ li{
     box-shadow: 0 0 0 2px white;
     height: 4%;
 }
-
+/*
 #step_button{
     color: white;
     background-color:transparent ;
@@ -101,7 +101,7 @@ li{
     margin: -20% auto 20% ;
     display: block;
 }
-
+*/
 #step_button:active{
     transform:translateX(5px);
 }
