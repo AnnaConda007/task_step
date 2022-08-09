@@ -8,6 +8,7 @@ let ol
 let arr_area
 let  button_ready
 let task_body = document.querySelector(".task_body")
+ 
 let num = 5
 let size_step=100/num        /*заменить на значение переменной*/
 var root= document.querySelector(":root");
@@ -18,8 +19,9 @@ let step_area
 let k_arr=0
 let li_input
 let ol_double
+ 
 
-  
+
 
 
 
@@ -36,7 +38,7 @@ let ol_double
   button__send_value_in_arr.setAttribute('type', 'submit');
   button__send_value_in_arr.setAttribute("value", "следующая задача" )
   
-  primary_form.addEventListener("submit", function (evt) {  
+  primary_form.addEventListener("submit", function(evt) {  
     evt.preventDefault()
     let value_of_primary_input=document.getElementById("primary_input").value
     arr.push(value_of_primary_input)
@@ -56,15 +58,47 @@ let ol_double
         button_ready.innerHTML="все задачи введены"
         button_ready.id="step_button"
         arr_area.append(button_ready)
-        return 
     }
-    
+    k_arr++
+
+
+    button_ready.addEventListener("click", function(){    
+    if(step_area==undefined){step_area=document.createElement("div")
+    body.append(step_area)
+    step_area.id ="task_body" 
+    primary_form.remove()
+    button_ready.remove()
+    ol.remove()
+    li.remove()
+    if(ol_double==undefined){ol_double= document.createElement("ol")
+arr_area.append(ol_double)}
+  for(let i=0; i<k_arr; i++){
+    let li_double
+  li_double =document.createElement("li")
+  ol_double.append(li_double)
+  li_input=document.createElement("input")
+  li_double.append(li_input)
+  li_input.setAttribute('type', 'checkbox');
+  li_input.id="li_input";
+  let label=document.createElement("label")
+  li_double.append(label)
+  label.setAttribute("for","li_input")
+    label.innerHTML=arr[i]
+    let size_step = 100/k_arr
+    let step = document.createElement("div")
+    step_area.append(step)
+    step.id="step"
+  step.style.width= size_step + "%"
+  step.style.height=size_step + "%"
+   
+  step.style.position= "absolute"                  
+  step.style.left=  shift_right + "%"
+  step.style.bottom= shift_right + "%"
+  shift_right= shift_right + size_step
+      }
+    } 
 }
 )
-    button_ready.addEventListener("click", function(){
-        alert("boo") }) 
+})
 
  
-   
-
-    
