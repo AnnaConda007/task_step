@@ -38,6 +38,9 @@ let ol_double
   button__send_value_in_arr.setAttribute('type', 'submit');
   button__send_value_in_arr.setAttribute("value", "следующая задача" )
   
+
+let promises=new Promise( function(resolve, reject){
+
   primary_form.addEventListener("submit", function(evt) {  
     evt.preventDefault()
     let value_of_primary_input=document.getElementById("primary_input").value
@@ -61,8 +64,15 @@ let ol_double
     }
     k_arr++
 
+    resolve(button_ready)
+  
+})
+})
 
-    button_ready.addEventListener("click", function(){    
+promises.then(function(){
+ let twopromises=new Promise( function(resolve, reject){
+ 
+  button_ready.addEventListener("click", function(){    
     if(step_area==undefined){step_area=document.createElement("div")
     body.append(step_area)
     step_area.id ="task_body" 
@@ -84,7 +94,26 @@ arr_area.append(ol_double)}
   li_double.append(label)
   label.setAttribute("for","li_input")
     label.innerHTML=arr[i]
-    let size_step = 100/k_arr
+      }
+    }
+  }
+  )
+  resolve(li_input)})
+
+
+
+twopromises.then(
+  function(){
+    li_input.addEventListener("click", function(){
+      alert("lkjnbvc")})})
+
+})
+
+
+
+
+
+/*  let size_step = 100/k_arr
     let step = document.createElement("div")
     step_area.append(step)
     step.id="step"
@@ -94,11 +123,4 @@ arr_area.append(ol_double)}
   step.style.position= "absolute"                  
   step.style.left=  shift_right + "%"
   step.style.bottom= shift_right + "%"
-  shift_right= shift_right + size_step
-      }
-    } 
-}
-)
-})
-
- 
+  shift_right= shift_right + size_step*/
