@@ -18,8 +18,9 @@ let k_of_step=0  /*k_arr*/
 let step_area
 let k_arr=0
 let li_input
+
+
 let ol_double
- 
 
 
 
@@ -70,8 +71,7 @@ let promises=new Promise( function(resolve, reject){
 })
 
 promises.then(function(){
- let twopromises=new Promise( function(resolve, reject){
- 
+  
   button_ready.addEventListener("click", function(){    
     if(step_area==undefined){step_area=document.createElement("div")
     body.append(step_area)
@@ -90,37 +90,41 @@ arr_area.append(ol_double)}
   li_double.append(li_input)
   li_input.setAttribute('type', 'checkbox');
   li_input.id="li_input";
+  li_input.classList.add("li");
   let label=document.createElement("label")
   li_double.append(label)
   label.setAttribute("for","li_input")
     label.innerHTML=arr[i]
       }
-    }
-  }
-  )
-  resolve(li_input)})
+let all_li_input=document.querySelectorAll("li")
 
-
-
-twopromises.then(
-  function(){
-    li_input.addEventListener("click", function(){
-      alert("lkjnbvc")})})
-
-})
-
-
-
-
-
-/*  let size_step = 100/k_arr
+all_li_input.forEach(input=>{
+  input.addEventListener("click", function(){ 
+    let size_step = 100/k_arr
     let step = document.createElement("div")
     step_area.append(step)
     step.id="step"
   step.style.width= size_step + "%"
   step.style.height=size_step + "%"
-   
   step.style.position= "absolute"                  
   step.style.left=  shift_right + "%"
   step.style.bottom= shift_right + "%"
-  shift_right= shift_right + size_step*/
+  shift_right= shift_right + size_step
+  input.remove
+   
+  })  
+})
+
+    
+    }})
+  
+}) 
+ 
+
+
+
+
+/*  */
+
+
+   
