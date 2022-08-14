@@ -1,6 +1,4 @@
 
-
-
 html, body {height: 100% }
 *{
     padding: 0px;
@@ -17,9 +15,20 @@ align-items: center
 #task_body{
  width: 60%;
  height: 90%;
+ color: white;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
-    position:"absolute"
+    position: relative;
+}
+
+
+#step{
+    color: white;
+    background-color:transparent ;
+    box-shadow: 0 0 0 2px white;
+    border-color: transparent;
+    
+
 }
 
 #start_button{
@@ -45,7 +54,6 @@ transform:translateX(5px);
     color: white;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
-    position:"absolute"
 }
     
 #primary_input{
