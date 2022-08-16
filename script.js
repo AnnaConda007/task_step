@@ -1,11 +1,10 @@
 
+let body = document.body;
+let startBtn=document.getElementById("start_button")   
+startBtn.addEventListener("click", function(){
+  startBtn.remove()
+})
 
-
-
-
-
-
-const body = document.body;
 
 
 function createElement (tagName, parentDOMElement,id,type,value ) {
@@ -15,17 +14,16 @@ function createElement (tagName, parentDOMElement,id,type,value ) {
   newDOMElement.setAttribute('type', type);
   newDOMElement.innerHTML=value
   return newDOMElement;
-
 }
 
+ 
 
 
 
-
-
+/*
 const newDOM = createElement("button",body,"idid",null,"готово")
 newDOM.addEventListener("click", function(){alert("дадаад")})
-
+*/
 
 
 
@@ -130,7 +128,27 @@ all_li_input.forEach(input=>{
 
 
 
-  */
+  
 
 
    
+new Promise(function(resolve, reject) {
+
+   resolve(1); // (*)
+
+}).then(function(result) { // (**)
+
+  alert(result); // 1
+  return result * 2;
+
+}).then(function(result) { // (***)
+
+  alert(result); // 2
+  return result * 2;
+
+}).then(function(result) {
+
+  alert(result); // 4
+  return result * 2;
+
+});*/
