@@ -1,29 +1,35 @@
 
-let  arr=[]
-let primary_form
-let body = document.querySelector("body")
-let primary_input
-let li
-let ol 
-let arr_area
-let  button_ready
-let task_body = document.querySelector(".task_body")
- 
-let num = 5
-let size_step=100/num        /*заменить на значение переменной*/
-var root= document.querySelector(":root");
-let step
-let shift_right = 0
-let k_of_step=0  /*k_arr*/
-let step_area
-let k_arr=0
-let li_input
-
-
-let ol_double
 
 
 
+
+
+
+const body = document.body;
+
+
+function createElement (tagName, parentDOMElement,id,type,value ) {
+  const newDOMElement = document.createElement(tagName);
+  parentDOMElement.append(newDOMElement);
+  newDOMElement.id=id;
+  newDOMElement.setAttribute('type', type);
+  newDOMElement.innerHTML=value
+  return newDOMElement;
+
+}
+
+
+
+
+
+
+const newDOM = createElement("button",body,"idid",null,"готово")
+newDOM.addEventListener("click", function(){alert("дадаад")})
+
+
+
+
+/*
 
 
   primary_form = document.createElement("form")    
@@ -124,7 +130,7 @@ all_li_input.forEach(input=>{
 
 
 
-/*  */
+  */
 
 
    
