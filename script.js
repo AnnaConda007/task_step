@@ -1,23 +1,50 @@
 
 let body = document.body;
 let startBtn=document.getElementById("start_button")   
-startBtn.addEventListener("click", function(){
-  startBtn.remove()
-})
-
-
-
+let arr=[]
+let k_arr = 0
 function createElement (tagName, parentDOMElement,id,type,value ) {
   const newDOMElement = document.createElement(tagName);
   parentDOMElement.append(newDOMElement);
   newDOMElement.id=id;
   newDOMElement.setAttribute('type', type);
-  newDOMElement.innerHTML=value
+  newDOMElement.value=value
   return newDOMElement;
 }
 
- 
 
+  startBtn.addEventListener("click", function(){
+    startBtn.remove()
+    let arr_area
+    let ol
+    let buttonReady
+  let primary_form=createElement ("form",body,"form",null,null )
+  let primary_input=createElement ("input",primary_form,"primary_input",'text',null )
+  let button__send_value_in_arr=createElement ("input",primary_form,"send",'submit',"следующая задача" )
+  primary_form.addEventListener("submit", function(evt) {  
+    evt.preventDefault()
+    primary_input.style.boxShadow="0 0 0 2px white"
+    let value_of_primary_input=document.getElementById("primary_input").value
+    if( primary_input.value!=""){
+    arr.push(value_of_primary_input)
+    if(arr_area===undefined) {
+      arr_area =createElement ("div",body,"arr_area",null,null)}
+    if(ol==undefined){ol=createElement ("ol",arr_area,null,null,null)}
+    li =document.createElement("li")
+    ol.append(li)
+    li.innerHTML=arr[k_arr]
+    k_arr++}else{ primary_input.style.boxShadow=" 0 0 15px red"}
+     primary_input.value=""
+     if(buttonReady==undefined){
+      buttonReady=createElement ("button",ol,"step_button",null,null )
+      buttonReady.innerHTML="все задачи введены"
+  }    
+
+  })
+  })
+ 
+ 
+  
 
 
 /*
@@ -59,7 +86,6 @@ let promises=new Promise( function(resolve, reject){
          arr_area.append(ol)}
     li =document.createElement("li")
     ol.append(li)
-     
     li.innerHTML=arr[k_arr]
     if(button_ready==undefined){
         button_ready=document.createElement("button") 
