@@ -3,6 +3,8 @@ let body = document.body;
 let startBtn=document.getElementById("start_button")   
 let arr=[]
 let k_arr = 0
+let ol_double 
+let stepArea 
 function createElement (tagName, parentDOMElement,id) {
   const newDOMElement = document.createElement(tagName);
   parentDOMElement.append(newDOMElement);
@@ -39,14 +41,14 @@ function createElement (tagName, parentDOMElement,id) {
      if(buttonReady==undefined){
       buttonReady=createElement ("button",arr_area,"step_button" )
       buttonReady.innerHTML="все задачи введены"
-  }    
+  } 
+   
   buttonReady.addEventListener("click", function(){
-     arr_area.remove()
+    arr_area.remove()
      primary_form.remove()
      ol.remove()
      li.remove()
-    let ol_double
-    if( ol_double==undefined){
+    if(ol_double==undefined){
       ol_double=createElement ("ol",body,"ol_double" )
     for(let i=0; i<k_arr; i++){
       let li_double
@@ -59,82 +61,41 @@ function createElement (tagName, parentDOMElement,id) {
     label.innerHTML=arr[i]
     }
   }
-   })
+ if(stepArea==undefined){
+  stepArea=createElement ("div",body,"task_body"  )
+ }
+ let all_li_input=document.querySelectorAll("li")
+ all_li_input.forEach(input=>{input.addEventListener("click", function(){
+  let size_step = 100/k_arr
+  let step = document.createElement("div")
+  stepArea.append(step)
+  step.id="step"
+  let shift_right
+step.style.width= size_step + "%"
+step.style.height=size_step + "%"
+step.style.position= "absolute"                  
+step.style.left=  shift_right + "%"
+step.style.bottom= shift_right + "%"
+ shift_right= shift_right + size_step
+input.remove
+ })
 
-  })
-  })
- 
- 
-  
 
-
-
- 
-  /*
-   
-  for(let i=0; i<k_arr; i++){
-    let li_double
-  li_double =document.createElement("li")
-  ol_double.append(li_double)
-  li_input=document.createElement("input")
-  li_double.append(li_input)
-  li_input.setAttribute('type', 'checkbox');
-  li_input.id="li_input";
-  li_input.classList.add("li");
-  let label=document.createElement("label")
-  li_double.append(label)
-  label.setAttribute("for","li_input")
-    label.innerHTML=arr[i]
-      }
-let all_li_input=document.querySelectorAll("li")
-
-all_li_input.forEach(input=>{
-  input.addEventListener("click", function(){ 
-    let size_step = 100/k_arr
-    let step = document.createElement("div")
-    step_area.append(step)
-    step.id="step"
-  step.style.width= size_step + "%"
-  step.style.height=size_step + "%"
-  step.style.position= "absolute"                  
-  step.style.left=  shift_right + "%"
-  step.style.bottom= shift_right + "%"
-  shift_right= shift_right + size_step
-  input.remove
-   
-  })  
 })
 
-    
-    }})
-  
-}) 
+  })
+  })
+ 
+ 
+})
+
+
+ 
  
 
 
 
 
   
-
-
-   
-new Promise(function(resolve, reject) {
-
-   resolve(1); // (*)
-
-}).then(function(result) { // (**)
-
-  alert(result); // 1
-  return result * 2;
-
-}).then(function(result) { // (***)
-
-  alert(result); // 2
-  return result * 2;
-
-}).then(function(result) {
-
-  alert(result); // 4
-  return result * 2;
-
-});*/
+ 
+ 
