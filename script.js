@@ -19,8 +19,8 @@ function createElement (tagName, parentDOMElement,id) {
     let ol
     let buttonReady
   let primary_form=createElement ("form",body,"form")
-  let primary_input=createElement ("input",primary_form,"primary_input",'text',null )
-
+  let primary_input=createElement ("input",primary_form,"primary_input")
+  primary_input.setAttribute('autocomplete', 'off')
   let button__send_value_in_arr=createElement ("input",primary_form,"send")
   button__send_value_in_arr.setAttribute('type', 'submit')
   button__send_value_in_arr.value="следующая задача"
@@ -77,35 +77,12 @@ function createElement (tagName, parentDOMElement,id) {
   
   
   })
-  
     })
    
-   
-    
-
-
   })
-
-
-
-
 
 })
 
-
-
-   
- 
-
-
-
- 
- 
-
-
-
-
-  
  function step(){ let k = 0
   k++  
       let size_step = 100/k_arr

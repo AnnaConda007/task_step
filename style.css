@@ -16,7 +16,7 @@ align-items: center
  width: 60%;
  height: 90%;
  color: white;
-    background-color:transparent ;
+    background-color: rosybrown ;
     box-shadow: 0 0 0 2px white;
     position: relative;
 }
@@ -24,10 +24,8 @@ align-items: center
 
 #step{
     color: white;
-    background-color:transparent ;
-    box-shadow: 0 0 0 2px white;
-    border-color: transparent;
-    
+    background-color: rgb(176, 134, 134) ;
+    box-shadow: 0  0 10px rgba(255, 255, 255, 0.811)
 
 }
 
@@ -125,3 +123,13 @@ li{
    #step_button:hover{
     box-shadow: 0  0 10px rgba(255, 255, 255, 0.811);
      }
+
+
+     
+@media (max-width: 600px) {
+    body{
+        display: grid;      
+        background-color: blue;  
+    }
+
+}
