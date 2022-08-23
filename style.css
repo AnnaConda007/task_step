@@ -56,6 +56,15 @@ transform:translateX(5px);
     box-shadow: 0 0 0 2px white;
 }
     
+#ol_double{
+    width: 30%;
+    height: 90%;
+    color: white;
+    background-color:transparent ;
+    box-shadow: 0 0 0 2px white;
+}
+    
+
 #primary_input{
     color: white;
     background-color:transparent ;
