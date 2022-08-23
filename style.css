@@ -126,10 +126,3 @@ li{
 
 
      
-@media (max-width: 600px) {
-    body{
-        display: grid;      
-        background-color: blue;  
-    }
-
-}
