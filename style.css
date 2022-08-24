@@ -127,7 +127,7 @@ li{
 
 
 img{
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
 }
 
@@ -174,7 +174,13 @@ body{
     grid-column: 2/6;
     width: 100%;
     
+    
 }
+img{
+    max-width: 50%;
+    height: auto;
+}
+
 }
 
 
