@@ -125,6 +125,13 @@ li{
      }
 
 
+
+img{
+    max-width: 30%;
+    height: auto;
+}
+
+
      
 @media (max-width: 600px) {
 body{
@@ -167,13 +174,15 @@ body{
     grid-column: 2/6;
     width: 100%;
     
+    
 }
+img{
+    max-width: 50%;
+    height: auto;
+}
+
 }
 
 
 
 
-
-/*
-grid-column: 1 / 2;
-grid-row: 1 / 4;*/

@@ -13,6 +13,10 @@ function createElement (tagName, parentDOMElement,id) {
   return newDOMElement;
 }
 
+
+
+
+
   startBtn.addEventListener("click", function(){
     startBtn.remove()
     let arr_area
@@ -82,8 +86,8 @@ function createElement (tagName, parentDOMElement,id) {
   })
 
 })
-
- function step(){ let k = 0
+let k = 0
+ function step(){ 
   k++  
       let size_step = 100/k_arr
     let step = document.createElement("div")
@@ -95,4 +99,10 @@ function createElement (tagName, parentDOMElement,id) {
   step.style.left=  shift_right + "%"
   step.style.bottom= shift_right + "%"
   shift_right= shift_right + size_step
+  if(k==k_arr){
+  let img = document.createElement("img");
+img.src = "https://vk.com/sticker/1-13796-512-9";
+stepArea.append(img)}
+  
+  
   }
