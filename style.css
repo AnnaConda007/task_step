@@ -9,8 +9,31 @@ body{
 background-color: rosybrown;
 display: flex;
 justify-content: space-around;
-align-items: center
+align-items: center; 
+flex-wrap: wrap;
 }
+ 
+
+#goalForm{
+ color: white;
+    background-color:transparent ;
+    border-color: transparent;
+    width: 50%;
+    padding: 15px;
+}
+
+#goalInput{
+    background-color:transparent;
+    border-color: transparent;
+    outline:none;
+    border-bottom: 1px solid white;;
+    margin-bottom: 20px;
+    width: 100%;
+    color: white;
+    font-size: 100%;
+}
+
+ 
 
 #task_body{
  width: 60%;
@@ -33,10 +56,12 @@ align-items: center
     color: white;
     background-color:transparent ;
     box-shadow: 0 0 0 2px white;
-    width: 40%;
+    width: 100%;
     text-align: center;
     border-color: transparent;
     padding: 10px;
+    
+
 }
 
 #start_button:hover{
