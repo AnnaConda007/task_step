@@ -3,10 +3,11 @@ html, body {height: 100% }
 *{
     padding: 0px;
     margin: 0px;
+    border-radius: 20px;
 }
 
 body{
-background-color: rosybrown;
+background-color: rgb(144, 15, 237);
 display: flex;
 justify-content: space-around;
 align-items: center; 
@@ -31,6 +32,7 @@ flex-wrap: wrap;
     width: 100%;
     color: white;
     font-size: 100%;
+    border-radius:0
 }
 
  
@@ -39,16 +41,21 @@ flex-wrap: wrap;
  width: 60%;
  height: 90%;
  color: white;
-    background-color: rosybrown ;
+    background-color: transparent ;
     box-shadow: 0 0 0 2px white;
     position: relative;
+    border-radius: 20px 0 20px 0px;
 }
 
+p{
+    padding: 5px;
+}
 
 #step{
     color: white;
-    background-color: rgb(176, 134, 134) ;
-    box-shadow: 0  0 10px rgba(255, 255, 255, 0.811)
+    background-color: rgb(165, 17, 229) ;
+    box-shadow: 0  0 10px rgba(22, 1, 1, 0.811);
+     border-radius: 0;
 
 }
 

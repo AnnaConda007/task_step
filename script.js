@@ -43,16 +43,17 @@ function createElement (tagName, parentDOMElement,id) {
       let value_of_primary_input=document.getElementById("primary_input").value
       if( primary_input.value!=""){
       arr.push(value_of_primary_input)
-    
+      if(arr_area===undefined) {
+        arr_area =createElement ("div",body,"arr_area")}
       if(ol==undefined){ol=createElement ("ol",arr_area,null)}
       li =document.createElement("li")
       ol.append(li)
       li.innerHTML=arr[k_arr]
       k_arr++}else{ primary_input.style.boxShadow=" 0 0 15px red"}
        primary_input.value=""
-       if(buttonReady==undefined){
+       if(buttonReady==undefined && k_arr){
         buttonReady=createElement ("button",arr_area,"step_button" )
-        buttonReady.innerHTML="все этапы введены"
+        buttonReady.innerHTML="все задачи введены"
         resolve(buttonReady)
     } 
   })
