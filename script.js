@@ -72,11 +72,8 @@ promises.then(function end(){
       
       li_double=createElement ("li",ol_double,"id" )
     let li_input
-      li_input=createElement ("input", li_double,"li_input"  )
-      li_input.setAttribute('type', 'checkbox');
-      let label=createElement ("label", li_double,"li_input"  )
-    label.setAttribute("for","li_input")
-    label.innerHTML= arr[i]
+       
+    li_double.innerHTML= arr[i]
     }
   }
  if(stepArea==undefined){
@@ -85,17 +82,23 @@ promises.then(function end(){
  stepArea.append(p)
  p.innerHTML=`${goalValue}`
 p.style.textAlign="end"
+
  let all_li_input=document.querySelectorAll("li")
- all_li_input.forEach(input=>{input.addEventListener("click", step,{once: true}
+ all_li_input.forEach(input=>{input.addEventListener("click", function(){
+  input.style.textDecoration="line-through"
+  step()
+ }
+ 
  )
 })
   })
  
 })
-
+ 
 let k = 0
 function step(){ 
 k++  
+ 
     let size_step = 100/k_arr
   let step = document.createElement("div")
   stepArea.append(step)
@@ -120,8 +123,6 @@ stepArea=undefined
 }
 
 }
-
-
 
 
 
