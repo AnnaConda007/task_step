@@ -18,8 +18,6 @@ function createElement (tagName, parentDOMElement,id) {
 }
 
 
-
-goalInput.style.borderBottom="1px solid white"
 goal.addEventListener("submit", function start(evt){
   evt.preventDefault()
   goalValue=document.getElementById("goalInput").value
@@ -71,10 +69,7 @@ promises.then(function end(){
     if(ol_double==undefined){
       ol_double=createElement ("ol",body,"ol_double" )
     for(let i=0; i<k_arr; i++){
-      
       li_double=createElement ("li",ol_double,"id" )
-    let li_input
-       
     li_double.innerHTML= arr[i]
     }
   }
@@ -90,17 +85,14 @@ p.style.textAlign="end"
   input.style.textDecoration="line-through"
   step()
  }
- 
  )
 })
   })
- 
 })
  
 let k = 0
 function step(){ 
 k++  
- 
     let size_step = 100/k_arr
   let step = document.createElement("div")
   stepArea.append(step)
