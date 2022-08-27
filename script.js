@@ -9,6 +9,7 @@ let shift_right=0
 let repeadBtn
 let li_double
 let goal =document.getElementById("goalForm")  
+let goalInput=document.getElementById("goalInput")
 function createElement (tagName, parentDOMElement,id) {
   const newDOMElement = document.createElement(tagName);
   parentDOMElement.append(newDOMElement);
@@ -17,11 +18,13 @@ function createElement (tagName, parentDOMElement,id) {
 }
 
 
-let goalValue
+
+goalInput.style.borderBottom="1px solid white"
 goal.addEventListener("submit", function start(evt){
   evt.preventDefault()
   goalValue=document.getElementById("goalInput").value
-  goal.remove()
+  if(goalValue!==""){
+    goal.remove()
   let arr_area
   let ol
   let buttonReady
@@ -118,12 +121,10 @@ repeadBtn.innerHTML="следующая цель"
 repeadBtn.style.margin="0 auto 0"
 repeadBtn.addEventListener("click",function(){location.reload()})
 }
-
 }
-
-
-
-
+  } else{goalInput.style.borderBottom="1px solid red"
+    
+  }
 })
 
 
