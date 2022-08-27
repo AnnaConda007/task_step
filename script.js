@@ -8,7 +8,7 @@ let stepArea
 let shift_right=0
 let repeadBtn
 let li_double
-let goal = document.getElementById("goalForm")
+let goal =document.getElementById("goalForm")  
 function createElement (tagName, parentDOMElement,id) {
   const newDOMElement = document.createElement(tagName);
   parentDOMElement.append(newDOMElement);
@@ -20,12 +20,12 @@ function createElement (tagName, parentDOMElement,id) {
 
 
 
-  startBtn.addEventListener("click", function start(){
-    startBtn.remove()
+goal.addEventListener("submit", function start(){
     let arr_area
     let ol
     let buttonReady
     goal.remove()
+  
   let primary_form=createElement ("form",body,"form")
   let primary_input=createElement ("input",primary_form,"primary_input")
   primary_input.setAttribute('autocomplete', 'off')
@@ -39,7 +39,7 @@ function createElement (tagName, parentDOMElement,id) {
   let promises=new Promise( function(resolve){ 
     primary_form.addEventListener("submit", function (evt) {  
       evt.preventDefault()
-      primary_input.style.boxShadow="0 0 0 2px white"
+      primary_input.style.boxShadow="none"
       let value_of_primary_input=document.getElementById("primary_input").value
       if( primary_input.value!=""){
       arr.push(value_of_primary_input)
@@ -51,7 +51,7 @@ function createElement (tagName, parentDOMElement,id) {
       li.innerHTML=arr[k_arr]
       k_arr++}else{ primary_input.style.boxShadow=" 0 0 15px red"}
        primary_input.value=""
-       if(buttonReady==undefined && k_arr){
+       if(buttonReady==undefined && k_arr>1){
         buttonReady=createElement ("button",arr_area,"step_button" )
         buttonReady.innerHTML="все задачи введены"
         resolve(buttonReady)
@@ -71,7 +71,7 @@ function createElement (tagName, parentDOMElement,id) {
       for(let i=0; i<k_arr; i++){
         
         li_double=createElement ("li",ol_double,"id" )
-        let li_input
+      let li_input
         li_input=createElement ("input", li_double,"li_input"  )
         li_input.setAttribute('type', 'checkbox');
         let label=createElement ("label", li_double,"li_input"  )
