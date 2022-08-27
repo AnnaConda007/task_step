@@ -18,7 +18,6 @@ function createElement (tagName, parentDOMElement,id) {
 
 
 let goalValue
-
 goal.addEventListener("submit", function start(evt){
   evt.preventDefault()
   goalValue=document.getElementById("goalInput").value
@@ -113,13 +112,11 @@ if(k==k_arr){
 let img = document.createElement("img");
 img.src = "https://vk.com/sticker/1-13796-512-9";
 stepArea.append(img)
-p.style.color="#FFD700"
-repeadBtn=createElement ("button",ol_double,"id")
+p.style.textDecorationLine= "underline"
+repeadBtn=createElement ("button",ol_double,"step_button")
 repeadBtn.innerHTML="следующая цель"
-repeadBtn.addEventListener("click", function(){stepArea.remove(),ol_double.remove(),start() 
-ol_double=undefined
-stepArea=undefined
-})
+repeadBtn.style.margin="0 auto 0"
+repeadBtn.addEventListener("click",function(){location.reload()})
 }
 
 }
@@ -134,6 +131,4 @@ stepArea=undefined
  
  
 
-
-/* 
- */
+ 
