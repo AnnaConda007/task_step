@@ -84,7 +84,8 @@ p.style.textAlign="end"
  all_li_input.forEach(input=>{input.addEventListener("click", function(){
   input.style.textDecoration="line-through"
   step()
- }
+}, {once: true}
+
  )
 })
   })
